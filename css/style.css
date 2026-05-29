@@ -1,0 +1,14 @@
+/* Sweet Treats Bakery - Main Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background: #fff5e6; }
+header { background: #d2691e; padding: 1rem; margin-bottom: 2rem; border-radius: 8px; }
+nav a { color: white; margin-right: 20px; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 1200px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; }
+footer { background: #8b4513; color: white; text-align: center; padding: 1rem; margin-top: 2rem; border-radius: 8px; }
+
+/* Mobile responsive - fixes lecturer feedback */
+@media (max-width: 768px) {
+    nav a { display: block; margin: 10px 0; }
+    body { padding: 10px; }
+}ssss
