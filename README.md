@@ -18,3 +18,10 @@ Responsive 4-page website for Sweet Treats Bakery using HTML5 and CSS3.
 Student: Sanele Malindisa
 Student No: ST10514671
 Date:29 May 2026
+## Changelog - Part 2
+- Added responsive navigation using CSS media queries @media max-width: 768px
+- Navigation stacks vertically on mobile screens
+- Added consistent header and footer to all 4 pages
+
+## Screenshots
+![Desktop View](./SCREENSHOTS/desktop.png)
