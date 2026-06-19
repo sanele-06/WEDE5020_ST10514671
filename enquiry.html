@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enquiry - Sweet Treats Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Get a Quote</h1>
+    
+    <form>
+        <label>Select Cake Size:</label>
+        <select id="cakeSize">
+            <option value="">-- Choose Size --</option>
+            <option value="250">Small - R250</option>
+            <option value="450">Medium - R450</option>
+            <option value="750">Large - R750</option>
+        </select>
+        
+        <p id="priceDisplay">Price: R0</p>
+        
+        <button type="button" id="calcBtn">Calculate Price</button>
+    </form>
+
+    <script>
+        document.getElementById('calcBtn').addEventListener('click', function() {
+            let size = document.getElementById('cakeSize').value;
+            let priceDisplay = document.getElementById('priceDisplay');
+            
+            if(size === "") {
+                priceDisplay.innerText = "Please select a cake size!";
+                priceDisplay.style.color = "red";
+            } else {
+                priceDisplay.innerText = "Price: R" + size;
+                priceDisplay.style.color = "green";
+            }
+        });
+    </script>
+</body>
+</html>
