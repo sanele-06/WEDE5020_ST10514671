@@ -21,10 +21,41 @@
         <h1>Contact Us</h1>
         <p>Get in touch with us for any inquiries or feedback.</p>
     </main>
+<!-- Contact Form -->
+<form id="contactForm">
+  <label>Name:</label><br>
+  <input type="text" id="name" placeholder="Enter your name"><br><br>
+  
+  <label>Email:</label><br>
+  <input type="email" id="email" placeholder="Enter your email"><br><br>
+  
+  <label>Message:</label><br>
+  <textarea id="message" placeholder="Your message here" rows="4" cols="30"></textarea><br><br>
+  
+  <button type="submit">Send Enquiry</button>
+</form>
 
+<p id="errorMsg" style="color:red; font-weight:bold; margin-top:10px;"></p>
     <!-- Footer section with copyright information -->
     <footer>
         <p> &copy; 2026 Sweet Treats Bakery. All rights reserved.</p>
     </footer>
+    <script>
+document.getElementById('contactForm').onsubmit = function(e) {
+    e.preventDefault(); // stops page reload
+    
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    
+    if(name == "" || email == "") {
+        document.getElementById('errorMsg').innerText = "Please fill in Name and Email!";
+        return false;
+    }
+    
+    document.getElementById('errorMsg').innerText = ""; // clear error
+    alert("Thank you " + name + "! Sweet Treats Bakery will contact you soon.");
+    return true;
+}
+</script>
 </body>
 </html>
