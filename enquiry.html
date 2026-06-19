@@ -1,39 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Enquiry - Sweet Treats Bakery</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Now - Sweet Treats Bakery Price Calculator</title>
+<meta name="description" content="Order custom cakes from Sweet Treats Bakery Pretoria. Use our price calculator for instant quotes on birthdays and weddings.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Get a Quote</h1>
-    
-    <form>
-        <label>Select Cake Size:</label>
-        <select id="cakeSize">
-            <option value="">-- Choose Size --</option>
-            <option value="250">Small - R250</option>
-            <option value="450">Medium - R450</option>
-            <option value="750">Large - R750</option>
-        </select>
-        
-        <p id="priceDisplay">Price: R0</p>
-        
-        <button type="button" id="calcBtn">Calculate Price</button>
-    </form>
 
-    <script>
-        document.getElementById('calcBtn').addEventListener('click', function() {
-            let size = document.getElementById('cakeSize').value;
-            let priceDisplay = document.getElementById('priceDisplay');
-            
-            if(size === "") {
-                priceDisplay.innerText = "Please select a cake size!";
-                priceDisplay.style.color = "red";
-            } else {
-                priceDisplay.innerText = "Price: R" + size;
-                priceDisplay.style.color = "green";
-            }
-        });
-    </script>
+<h1>Sweet Treats Bakery Price Calculator</h1>
+
+<label for="cakeSize">Cake Size:</label>
+<select id="cakeSize">
+    <option value="">-- Choose Size --</option>
+    <option value="250">Small - R250</option>
+    <option value="450">Medium - R450</option>
+    <option value="750">Large - R750</option>
+</select>
+
+<br><br>
+<button id="calcBtn">Calculate Price</button>
+<p id="priceDisplay">Price: R0</p>
+
+<script>
+document.getElementById('calcBtn').addEventListener('click', function() {
+    let size = document.getElementById('cakeSize').value;
+    let display = document.getElementById('priceDisplay');
+    
+    if (size === "") {
+        display.innerText = "Please select a cake size!";
+        display.style.color = "red";
+        return;
+    }
+    
+    display.innerText = "Price: R" + size;
+    display.style.color = "green";
+});
+</script>
+
 </body>
 </html>
